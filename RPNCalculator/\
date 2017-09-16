@@ -1,0 +1,19 @@
+package org.tektutor;
+
+public class MathFactory {
+
+	public static IMathOperator getMathObject ( String operator ) {
+		IMathOperator mathOperator = null;
+
+		try {
+			mathOperator = (IMathOperator )Class.forName ( className ).newInstance();
+		}
+		catch ( Exception e ) {
+			e.printStackTrace();
+		}
+
+		return mathOperator;
+
+	}
+
+}
